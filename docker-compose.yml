@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  image-large:
+    build: 
+      context: .
+      dockerfile: Dockerfile.large
+    ports:        
+      - "9091:8085"
+    restart: always
+  image-small:
+    build: 
+      context: .
+      dockerfile: Dockerfile.small
+    ports:        
+      - "9092:8085"
+    restart: always
+  image-xsmall:
+    build: 
+      context: .
+      dockerfile: Dockerfile.xsmall
+    ports:        
+      - "9093:8085"
+    restart: always
